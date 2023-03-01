@@ -1,0 +1,88 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+   {
+      "alignment": "left",
+      "segments": [
+	    {
+          "foreground": "#ffffff",
+          "properties": {
+            "time_format": "15:04"
+          },
+          "style": "plain",
+          "template": "<#CB4B16>\u250f[</>{{ .CurrentDate | date .Format }}<#CB4B16>]</>",
+          "type": "time"
+        },
+        {
+          "foreground": "#ffffff",
+          "style": "plain",
+          "template": "<#CB4B16>[</>{{ .HEAD }}<#CB4B16>]</>",
+          "type": "git"
+        },
+        {
+          "foreground": "#ffffff",
+          "style": "plain",
+          "template": "<#CB4B16>[</>\uf0e7<#CB4B16>]</>",
+          "type": "root"
+        }
+      ],
+      "type": "prompt"
+    },	
+	{
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "exit",
+          "style": "plain",
+          "foreground": "#b8ff75",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#E06C75{{ end }}"
+          ],
+          "template": " x{{ .Meaning }}"
+        },
+        {
+          "foreground": "#b8ff75",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#E06C75{{ end }}"
+          ],
+          "properties": {
+            "style": "roundrock",
+            "always_enabled": true
+          },
+          "style": "diamond",
+          "template": " {{ .FormattedMs }} ",
+          "type": "executiontime"
+        },
+        {
+          "foreground": "#b8ff75",
+          "style": "diamond",
+          "template": " <#ffffff>CPU:</> {{ round .PhysicalPercentUsed .Precision }}% ",
+          "type": "sysinfo"
+        },
+        {
+          "foreground": "#b8ff75",
+          "style": "diamond",
+          "template": "<#ffffff>\uf6dc</> <#ffffff>RAM:</> {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB ",
+          "type": "sysinfo"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#ffffff",
+          "properties": {
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "<#CB4B16>\u2516[</>{{ .Path }}<#CB4B16>]></>",
+          "type": "path"
+        }
+      ],
+      "type": "prompt"
+    }],
+  "version": 2
+}
