@@ -53,7 +53,6 @@ Located themes: $env:POSH_THEMES_PATH
    Install-Module -Name PSReadLine -AllowPrerelease -Force
    ```
 
-
 4. Powershell Profile erweitern
    ```
    Import-Module PSReadLine
@@ -62,4 +61,20 @@ Located themes: $env:POSH_THEMES_PATH
    Set-PSReadLineOption -EditMode Windows
    Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
    Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+   # Move cursor at the end after history search
+   Set-PSReadLineOption -HistorySearchCursorMovesToEnd
+   ```
+
+### More Customization
+
+1. Copy your current working directoy if tab is duplicated\
+   https://ohmyposh.dev/docs/configuration/general#general-settings
+   
+   Your theme file (scheme) should start with the `pwd` property
+   ```
+   {
+     "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+     "pwd": "osc99",
+     ...
+   }
    ```
