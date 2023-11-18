@@ -18,10 +18,10 @@ oh-my-posh font install
 
 3. Powershell 5.1 Profile erstellen
 5.1 (eins von beiden wählen - RECOMMENDED: 2. Option da ISE kein oh-my-posh kann)
-  - (ALLE PS Instanzen) Pfad: C:\Users\<USER>\Documents\WindowsPowerShell\Profile.ps1
-  - (Exclude ISE Instanzen) Pfad: C:\Users\<USER>\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+  - (ALLE PS Instanzen) Pfad: `C:\Users\<USER>\Documents\WindowsPowerShell\Profile.ps1`
+  - (Exclude ISE Instanzen) Pfad: `C:\Users\<USER>\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`
 
-7.X Pfad: C:\Users\<USER>\Documents\PowerShell\Profile.ps1
+7.X Pfad: `C:\Users\<USER>\Documents\PowerShell\Profile.ps1`
 
 4. Beide Profile mit oh-my-posh Start Command erweitern
 ```
