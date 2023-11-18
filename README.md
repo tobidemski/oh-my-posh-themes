@@ -54,11 +54,11 @@ Install-Module -Name PSReadLine -AllowPrerelease -Force
 
 
 4. Powershell Profile erweitern
-`
+```
 Import-Module PSReadLine
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -EditMode Windows
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
-`
+```
