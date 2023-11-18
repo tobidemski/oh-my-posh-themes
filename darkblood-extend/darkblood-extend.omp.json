@@ -56,13 +56,7 @@
         {
           "foreground": "#b8ff75",
           "style": "diamond",
-          "template": " <#ffffff>CPU:</> {{ round .PhysicalPercentUsed .Precision }}% ",
-          "type": "sysinfo"
-        },
-        {
-          "foreground": "#b8ff75",
-          "style": "diamond",
-          "template": "<#ffffff>\uf6dc</> <#ffffff>RAM:</> {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB ",
+          "template": "<#ffffff>\ue266</> <#ffffff>MEM:</> {{ round .PhysicalPercentUsed .Precision }}% ({{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB) ",
           "type": "sysinfo"
         }
       ],
